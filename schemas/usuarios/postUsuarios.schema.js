@@ -17,32 +17,19 @@ const postUsuariosSchema = {
         ]
     },
     badRequest: {
-        registeredEmail: {
-            "$schema": "http://json-schema.org/draft-07/schema#",
-            "title": "Bad Request Schema",
-            "type": "object",
-            "properties": {
-                "message": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "message"
-            ]
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "Bad Request Schema",
+        "type": "object",
+        "propertyNames": {
+            "type": "string"
         },
-        name: {
-            "$schema": "http://json-schema.org/draft-07/schema#",
-            "title": "Generated schema for Root",
-            "type": "object",
-            "properties": {
-                "nome": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "nome"
-            ]
-        }
+        "patternProperties": {
+            ".*": {
+                "type": "string"
+            }
+        },
+        "minProperties": 1,
+        "maxProperties": 1
     }
 }
 
