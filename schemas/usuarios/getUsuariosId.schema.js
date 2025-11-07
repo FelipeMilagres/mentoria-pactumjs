@@ -1,10 +1,19 @@
-const postUsuariosSchema = {
-    created: {
+const getUsuariosIdSchema = {
+    ok: {
         "$schema": "http://json-schema.org/draft-07/schema#",
-        "title": "Created Schema",
+        "title": "Ok Schema",
         "type": "object",
         "properties": {
-            "message": {
+            "nome": {
+                "type": "string"
+            },
+            "email": {
+                "type": "string"
+            },
+            "password": {
+                "type": "string"
+            },
+            "administrador": {
                 "type": "string"
             },
             "_id": {
@@ -12,7 +21,10 @@ const postUsuariosSchema = {
             }
         },
         "required": [
-            "message",
+            "nome",
+            "email",
+            "password",
+            "administrador",
             "_id"
         ]
     },
@@ -34,5 +46,5 @@ const postUsuariosSchema = {
 }
 
 module.exports = {
-    postUsuariosSchema
+    getUsuariosIdSchema
 }
