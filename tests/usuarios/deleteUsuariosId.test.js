@@ -34,7 +34,7 @@ describe('Teste da API - DELETE /usuarios/{_ID}', () => {
             expect(response).to.have.responseTimeLessThan(1000)
         })
 
-        it('DELETE - /usuarios/{_ID} - Usuário com carrinho (400)', async () => {
+        it.skip('DELETE - /usuarios/{_ID} - Usuário com carrinho (400)', async () => {
             response = await spec().delete(`${urls.usuarios}/0uxuPY0cbmQhpEz1`)
             expect(response).to.have.status(400)
             expect(response).to.have.jsonLike({

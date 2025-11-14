@@ -10,6 +10,10 @@ class FakerData {
             "administrador": "true"
         }
     }
+
+    createRandomEmail() {
+        return faker.internet.email()
+    }
 }
 
 module.exports = new FakerData()
